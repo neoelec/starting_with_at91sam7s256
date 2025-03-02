@@ -75,7 +75,11 @@ dataAbortVector:
 reservedVector:
         b       reservedVector          /* Reserved for future use */
 irqVector:
+#ifdef __AT91LIB_FREERTOS__
+        ldr     pc, [pc, #-0xF20]       /* Jump directly to the address given by the AIC */
+#else
         b       irqHandler              /* Interrupt */
+#endif
 fiqVector:
                                         /* Fast interrupt */
 //------------------------------------------------------------------------------
