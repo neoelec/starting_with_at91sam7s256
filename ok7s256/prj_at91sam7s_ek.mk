@@ -22,6 +22,11 @@ VPATH			+= $(OEM_AT91LIB)/boards/$(PLATFORM)
 
 AT91LIB			:= $(I_HDD00)/08.PROJECT/at91sam7s-ek/packages/at91lib
 
+VPATH			+= $(AT91LIB)/components/iso7816
+
+VPATH			+= $(AT91LIB)/drivers/async
+VPATH			+= $(AT91LIB)/drivers/twi
+
 VPATH			+= $(AT91LIB)/memories
 VPATH			+= $(AT91LIB)/memories/flash
 VPATH			+= $(AT91LIB)/memories/sdmmc
@@ -56,6 +61,8 @@ VPATH			+= $(AT91LIB)/usb/device/hid-mouse
 VPATH			+= $(AT91LIB)/usb/device/hid-transfer
 VPATH			+= $(AT91LIB)/usb/device/massstorage
 
+EXTRAINCDIRS		+= $(AT91LIB)/components
+EXTRAINCDIRS		+= $(AT91LIB)/drivers
 EXTRAINCDIRS		+= $(AT91LIB)/memories
 EXTRAINCDIRS		+= $(AT91LIB)/peripherals
 
