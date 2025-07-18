@@ -10,7 +10,6 @@ MK_RACCOON_DIR		:= $(I_HDD00)/08.PROJECT/mk-raccoon
 CHIP			:= at91sam7s256
 BOARD			:= ok-7s256
 PLATFORM		:= at91sam7s-ek
-PROGMEM			:= flash
 
 OEM_AT91LIB		:= $(PRJ_AT91_MK_DIR)/at91lib
 
